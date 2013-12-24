@@ -242,7 +242,7 @@ class EG_InternetAddons(Screen):
 	def uruchomInstalator(self):
 		if (self.state == self.STATE_DOWNLOAD):
 			self.state = self.STATE_IDLE
-			#self.fileUrl = 'http://magic-image.com.com/image-feed/enigma2/' + self.saved_url
+			#self.fileUrl = 'http://egami-image.com.com/image-feed/enigma2/' + self.saved_url
 			self.fileUrl = self.url[0:-19] + self.saved_url
 			if os.path.exists('/tmp/Addon.ipk'):
 				os.system('rm /tmp/Addon.ipk')
@@ -360,7 +360,7 @@ class EG_InternetAddons(Screen):
 			info_pic = ''
 		info_txt = str(info_txt)
 		info_pic = str(info_pic)
-		self.root_url = ('http://magic-image.com/image-feed/enigma2/')
+		self.root_url = ('http://egami-image.com/image-feed/enigma2/')
 		infoBox = self.session.open(EGAddonInfo, str((self.root_url + info_txt)), str((self.root_url + info_pic)))
 		if self.multi:
 			selection = self['menu'].getCurrent()
@@ -423,7 +423,7 @@ class EG_InternetAddons(Screen):
 class EG_PrzegladaczAddonow(EG_InternetAddons):
 	__module__ = __name__
 	def getMenuFile(self, url):
-		#inputUrl = ('http://magic-image.com.com/image-feed/enigma2/catalog_enigma2.xml')
+		#inputUrl = ('http://egami-image.com.com/image-feed/enigma2/catalog_enigma2.xml')
 		inputUrl = url
 		xmlFile = os.popen((('wget -q ' + inputUrl) + ' -O-')).read()
 		mdom = xml.dom.minidom.parseString(xmlFile)
@@ -431,7 +431,7 @@ class EG_PrzegladaczAddonow(EG_InternetAddons):
 
 	def __init__(self, session, url):
 		try:
-			#self.root_url = ('http://magic-image.com.com/image-feed/enigma2/catalog_enigma2.xml')
+			#self.root_url = ('http://egami-image.com.com/image-feed/enigma2/catalog_enigma2.xml')
 			self.root_url = url
 			mdom = self.getMenuFile(self.root_url)
 			node = mdom.childNodes[0]
