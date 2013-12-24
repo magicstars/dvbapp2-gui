@@ -124,7 +124,7 @@ class EGScrollLabel(ScrollLabel):
 		self.instance.move(ePoint(pos[0], pos[1]))
 		self.long_text.resize(eSize(*textSize))
 		self.long_text.move(ePoint(pos[0], pos[1]))
-		s = self.long_text.size()magic-image.com.com
+		s = self.long_text.size()
 		lineheight = fontRenderClass.getInstance().getLineHeight(self.long_text.getFont())
 		lines = int((s.height() / lineheight))
 		self.pageHeight = int((lines * lineheight))
@@ -360,7 +360,7 @@ class EG_InternetAddons(Screen):
 			info_pic = ''
 		info_txt = str(info_txt)
 		info_pic = str(info_pic)
-		self.root_url = ('http://magic-image.com/image-feed/enigma2/')
+		self.root_url = ('http://egami-image.com/image-feed/enigma2/')
 		infoBox = self.session.open(EGAddonInfo, str((self.root_url + info_txt)), str((self.root_url + info_pic)))
 		if self.multi:
 			selection = self['menu'].getCurrent()
