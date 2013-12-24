@@ -24,12 +24,24 @@ def InitSetupDevices():
 
 	config.osd = ConfigSubsection();
 	
-	if open("/proc/stb/info/boxtype").read().strip() == "ini-9000ru":
-		config.osd.language = ConfigText(default = "ru_RU");
-	elif open("/proc/stb/info/boxtype").read().strip() == "ini-5000ru":
-		config.osd.language = ConfigText(default = "ru_RU");
-	elif open("/proc/stb/info/boxtype").read().strip() == "ini-1000ru":
-		config.osd.language = ConfigText(default = "ru_RU");
+	if open("/proc/stb/info/boxtype").read().strip() == "et9000":
+		config.osd.language = ConfigText(default = "en_GB");
+	elif open("/proc/stb/info/boxtype").read().strip() == "et9200":
+		config.osd.language = ConfigText(default = "en_GB");
+	elif open("/proc/stb/info/boxtype").read().strip() == "et9500":
+		config.osd.language = ConfigText(default = "en_GB");
+        elif open("/proc/stb/info/boxtype").read().strip() == "et6200":
+		config.osd.language = ConfigText(default = "en_GB");
+	elif open("/proc/stb/info/boxtype").read().strip() == "et6500":
+		config.osd.language = ConfigText(default = "en_GB");
+        elif open("/proc/stb/info/boxtype").read().strip() == "et6000":
+		config.osd.language = ConfigText(default = "en_GB");
+	elif open("/proc/stb/info/boxtype").read().strip() == "et5000":
+		config.osd.language = ConfigText(default = "en_GB");
+        elif open("/proc/stb/info/boxtype").read().strip() == "et4000":
+		config.osd.language = ConfigText(default = "en_GB");
+	elif open("/proc/stb/info/boxtype").read().strip() == "et4500":
+		config.osd.language = ConfigText(default = "en_GB");
 	else:
 		config.osd.language = ConfigText(default = "en_GB");
 
