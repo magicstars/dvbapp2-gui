@@ -237,21 +237,6 @@ def magicBootExtract(source, target):
             os.chdir('venton-hdx')
         if os.path.exists('/media/magicboot/magicBootUpload/venton-hde'):
             os.chdir('venton-hde')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if os.path.exists('/media/magicboot/magicBootUpload/odinm9'):
-            os.chdir('odmm9')
-        if os.path.exists('/media/magicboot/magicBootUpload/odinm7'):
-            os.chdir('odinm7')
-        if os.path.exists('/media/magicboot/magicBootUpload/venton-hde'):
-            os.chdir('venton-hde')
-=======
->>>>>>> 8750c78885085ed8dd2e27d268ffa90d5c14d83f
-=======
->>>>>>> 8750c78885085ed8dd2e27d268ffa90d5c14d83f
-=======
->>>>>>> 8750c78885085ed8dd2e27d268ffa90d5c14d83f
         if os.path.exists('/media/magicboot/magicBootUpload/vuplus'):
             os.chdir('vuplus')
             if os.path.exists('/media/magicboot/magicBootUpload/vuplus/duo'):
@@ -285,17 +270,6 @@ def magicBootExtract(source, target):
         os.chdir('/home/root')
         rc = os.system('rm -r /media/magicboot/magicBootUpload/et9x00')
         rc = os.system('rm -r /media/magicboot/magicBootUpload/et6x00')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        rc = os.system('rm -r /media/magicboot/magicBootUpload/odinm7')
-        rc = os.system('rm -r /media/magicboot/magicBootUpload/odinm9')
-=======
->>>>>>> 8750c78885085ed8dd2e27d268ffa90d5c14d83f
-=======
->>>>>>> 8750c78885085ed8dd2e27d268ffa90d5c14d83f
-=======
->>>>>>> 8750c78885085ed8dd2e27d268ffa90d5c14d83f
         rc = os.system('rm -r /media/magicboot/magicBootUpload/venton-hdx')
         rc = os.system('rm -r /media/magicboot/magicBootUpload/venton-hde')
         rc = os.system('rm -r /media/magicboot/magicBootUpload/vuplus')
@@ -309,16 +283,4 @@ def magicBootExtract(source, target):
         rc = os.system('rmmod nandsim')
         rc = os.system('rm /media/magicboot/image_cache')
         rc = os.system('init 3')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     return 1
-=======
-    return 1
->>>>>>> 8750c78885085ed8dd2e27d268ffa90d5c14d83f
-=======
-    return 1
->>>>>>> 8750c78885085ed8dd2e27d268ffa90d5c14d83f
-=======
-    return 1
->>>>>>> 8750c78885085ed8dd2e27d268ffa90d5c14d83f
