@@ -42,6 +42,18 @@ def InitSetupDevices():
 		config.osd.language = ConfigText(default = "en_GB");
 	elif open("/proc/stb/info/boxtype").read().strip() == "et4500":
 		config.osd.language = ConfigText(default = "en_GB");
+	elif open("/proc/stb/info/vumodel").read().strip() == "duo":
+		config.osd.language = ConfigText(default = "en_GB");
+	elif open("/proc/stb/info/vumodel").read().strip() == "uno":
+		config.osd.language = ConfigText(default = "en_GB");
+	elif open("/proc/stb/info/vumodel").read().strip() == "solo":
+		config.osd.language = ConfigText(default = "en_GB");
+	elif open("/proc/stb/info/vumodel").read().strip() == "ultimo":
+		config.osd.language = ConfigText(default = "en_GB");
+	elif open("/proc/stb/info/vumodel").read().strip() == "solo2":
+		config.osd.language = ConfigText(default = "en_GB");
+	elif open("/proc/stb/info/vumodel").read().strip() == "duo2":
+		config.osd.language = ConfigText(default = "en_GB");	
 	else:
 		config.osd.language = ConfigText(default = "en_GB");
 
