@@ -18,8 +18,8 @@ def checkkernel():
     if not fileExists('/media/usb'):
         os.system('mkdir /media/usb')
     if os.path.isfile('/proc/stb/info/boxtype') and os.path.isfile('/proc/stb/info/version'):
-        if open('/proc/stb/info/boxtype').read().startswith('et9000') or open('/proc/stb/info/boxtype').read().strip() == 'et9200' or open('/proc/stb/info/boxtype').read().startswith('et9500') or open('/proc/stb/info/boxtype').read().startswith('et6000') or open('/proc/stb/info/boxtype').read().startswith('et6500') or open('/proc/stb/info/boxtype').read().startswith('et5000') or open('/proc/stb/info/boxtype').read().startswith('et5500') or open('/proc/stb/info/boxtype').read().startswith('et4000') or open('/proc/stb/info/boxtype').read().startswith('et4500'):
-            if about.getKernelVersionString() == '3.8.7':
+        if open('/proc/stb/info/boxtype').read().startswith('et9000') or open('/proc/stb/info/boxtype').read().strip() == 'et9200' or open('/proc/stb/info/boxtype').read().startswith('et9500') or open('/proc/stb/info/boxtype').read().startswith('et6000') or open('/proc/stb/info/boxtype').read().startswith('et6500') or open('/proc/stb/info/boxtype').read().startswith('et5000') or open('/proc/stb/info/boxtype').read().startswith('et5500') or open('/proc/stb/info/boxtype').read().startswith('et4000') or open('/proc/stb/info/boxtype').read().startswith('et4500') or open('/proc/stb/info/vumodel').read().startswith('duo') or open('/proc/stb/info/vumodel').read().startswith('uno') or open('/proc/stb/info/vumodel').read().startswith('solo') or open('/proc/stb/info/vumodel').read().startswith('ultimo') or open('/proc/stb/info/vumodel').read().startswith('duo2') or open('/proc/stb/info/vumodel').read().startswith('solo2'):
+            if (about.getKernelVersionString()=="3.8.7") or (about.getKernelVersionString()=="3.1.1"):
                 mycheck = 1
 	else:
 	  mycheck = 0
