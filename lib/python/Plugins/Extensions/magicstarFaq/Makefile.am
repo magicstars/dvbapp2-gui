@@ -1,4 +1,4 @@
-installdir = $(pkglibdir)/python/Plugins/Extensions/magicFaq
+installdir = $(pkglibdir)/python/Plugins/Extensions/magicstarFaq
 
 install_PYTHON = \
 	__init__.py \

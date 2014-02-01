@@ -1,6 +1,6 @@
 ##
 ## Permanent Clock
-## by AliAbdul mod for magic
+## by AliAbdul mod for magicstar
 ##
 from Components.ActionMap import ActionMap
 from Components.config import config, ConfigInteger, ConfigSubsection, ConfigYesNo
@@ -10,7 +10,7 @@ from os import environ
 from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
 from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
-from magic.magic_skins import EGPermanentClock_Skin
+from magicstar.magicstar_skins import EGPermanentClock_Skin
 
 config.plugins.PermanentClock = ConfigSubsection()
 config.plugins.PermanentClock.enabled = ConfigYesNo(default=False)

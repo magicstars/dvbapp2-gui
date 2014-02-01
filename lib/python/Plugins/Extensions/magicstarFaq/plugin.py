@@ -1,5 +1,5 @@
 #	-*-	coding:	utf-8	-*-
-# magic FAQ from YouTube - base on MediaPortal UserList
+# magicstar FAQ from YouTube - base on MediaPortal UserList
 
 from os.path import exists
 
@@ -15,17 +15,17 @@ USER_Version = "USER-Channels v0.96"
 
 USER_siteEncoding = 'utf-8'
 
-def magicFaq_YTChannelListEntry(entry):
+def magicstarFaq_YTChannelListEntry(entry):
 	return [entry,
 		(eListboxPythonMultiContent.TYPE_TEXT, 20, 0, 495, 25, 0, RT_HALIGN_CENTER | RT_VALIGN_CENTER, entry[1], 16777215, 16777215)
 		] 
 		
-def magicFaq_YTChannelListEntry2(entry):
+def magicstarFaq_YTChannelListEntry2(entry):
 	return [entry,
 		(eListboxPythonMultiContent.TYPE_TEXT, 50, 0, 495, 25, 0, RT_HALIGN_LEFT | RT_VALIGN_CENTER, entry[1])
 		] 
 		
-class magicFaq_YTChannel(Screen):
+class magicstarFaq_YTChannel(Screen):
 	
 	def __init__(self, session):
 		self.session = session
@@ -65,19 +65,19 @@ class magicFaq_YTChannel(Screen):
 		
 		mypath = resolveFilename(SCOPE_PLUGINS)
 
-		if (os.path.isfile("/proc/stb/info/boxtype")): 
-			f = open("/proc/stb/info/boxtype", "r")
+		if (os.path.isfile("/proc/stb/info/vumodel")): 
+			f = open("/proc/stb/info/vumodel", "r")
 			model = f.read().strip()
 			f.close()
 
-		if model == "ini-1000sv" or model == "ini-5000sv":
-			self.user_path = mypath + "Extensions/magicFaq/channels_3.xml"
-		elif model == "ini-1000ru" or model == "ini-5000ru" or model == "ini-9000ru":
-			self.user_path = mypath + "Extensions/magicFaq/channels_2.xml"
+		if model == "solo" or model == "ultimo":
+			self.user_path = mypath + "Extensions/magicstarFaq/channels_3.xml"
+		elif model == "duo" or model == "uno" or model == "duo2":
+			self.user_path = mypath + "Extensions/magicstarFaq/channels_2.xml"
 		elif model == "ini-3000" or model == "ini-5000" or model == "ini-7000" or model == "ini-7012":
-			self.user_path = mypath + "Extensions/magicFaq/channels_1.xml"
+			self.user_path = mypath + "Extensions/magicstarFaq/channels_1.xml"
 		else:
-			self.user_path = mypath + "Extensions/magicFaq/channels.xml"
+			self.user_path = mypath + "Extensions/magicstarFaq/channels.xml"
 			
 		self.keyLocked = True
 		self.genreliste = []
@@ -107,12 +107,12 @@ class magicFaq_YTChannel(Screen):
 			self.getUserFile(fInit=True)
 			
 		self.getUserFile()
-		self.chooseMenuList.setList(map(magicFaq_YTChannelListEntry, self.genreliste))
+		self.chooseMenuList.setList(map(magicstarFaq_YTChannelListEntry, self.genreliste))
 		
 	def getUserFile(self, fInit=False):
 		mypath = resolveFilename(SCOPE_PLUGINS)
 		
-		fname = mypath + "Extensions/magicFaq/channels.xml"
+		fname = mypath + "Extensions/magicstarFaq/channels.xml"
 				
 		print "fname: ",fname
 		try:
@@ -127,7 +127,7 @@ class magicFaq_YTChannel(Screen):
 			print "File Error: ",e
 			self.genreliste = []
 			self.genreliste.append((0, str(e), ""))
-			self.chooseMenuList.setList(map(magicFaq_YTChannelListEntry, self.genreliste))
+			self.chooseMenuList.setList(map(magicstarFaq_YTChannelListEntry, self.genreliste))
 		else:
 			self.userData(data)
 
@@ -146,7 +146,7 @@ class magicFaq_YTChannel(Screen):
 		else:
 			self.genreliste.append((0, "Keine User Channels gefunden !", ""))
 			
-		self.chooseMenuList.setList(map(magicFaq_YTChannelListEntry2, self.genreliste))
+		self.chooseMenuList.setList(map(magicstarFaq_YTChannelListEntry2, self.genreliste))
 	
 	def keyGreen(self):
 		self.getUserFile()
@@ -158,17 +158,17 @@ class magicFaq_YTChannel(Screen):
 		genreID = self['genreList'].getCurrent()[0][0]
 		genre = self['genreList'].getCurrent()[0][1]
 		stvLink = self['genreList'].getCurrent()[0][2]
-		self.session.open(magicFaq_ListChannel_ListScreen, genreID, stvLink, genre)
+		self.session.open(magicstarFaq_ListChannel_ListScreen, genreID, stvLink, genre)
 
 	def keyCancel(self):
 		self.close()
 
-def magicFaq_ListChannel_ListEntry(entry):
+def magicstarFaq_ListChannel_ListEntry(entry):
 	return [entry,
 		(eListboxPythonMultiContent.TYPE_TEXT, 20, 0, 495, 25, 0, RT_HALIGN_LEFT | RT_VALIGN_CENTER, entry[0]+entry[1], 16777215, 16777215)
 		] 
 		
-class magicFaq_ListChannel_ListScreen(Screen):
+class magicstarFaq_ListChannel_ListScreen(Screen):
 	
 	def __init__(self, session, genreID, stvLink, stvGenre):
 		self.session = session
@@ -275,7 +275,7 @@ class magicFaq_ListChannel_ListScreen(Screen):
 		
 		self.filmliste = []
 		self.filmliste.append(('Bitte warten...','','','',''))
-		self.chooseMenuList.setList(map(magicFaq_ListChannel_ListEntry, self.filmliste))
+		self.chooseMenuList.setList(map(magicstarFaq_ListChannel_ListEntry, self.filmliste))
 		
 		url = "http://gdata.youtube.com/feeds/api/users"+self.stvLink+"/uploads?"+\
 				"start-index=%d&max-results=%d&v=2" % (self.start_idx, self.max_res)
@@ -328,7 +328,7 @@ class magicFaq_ListChannel_ListScreen(Screen):
 			menu_len = len(self.filmliste)
 			print "Audio dramas found: ",menu_len
 			
-		self.chooseMenuList.setList(map(magicFaq_ListChannel_ListEntry, self.filmliste))
+		self.chooseMenuList.setList(map(magicstarFaq_ListChannel_ListEntry, self.filmliste))
 		self.keyLocked = False
 		self.showInfos()
 		
@@ -531,4 +531,4 @@ def main(session, **kwargs):
 		session.open(MessageBox, _('Sorry: You have to install MediaPortal to get running this plugin'), MessageBox.TYPE_INFO, 3)
 		
 def Plugins(**kwargs):
-	return PluginDescriptor(name=_("magic FAQ"), description="Video Tutorials", where = [PluginDescriptor.WHERE_PLUGINMENU, PluginDescriptor.WHERE_EXTENSIONSMENU], icon="plugin_icon.png", fnc=main)
+	return PluginDescriptor(name=_("magicstar FAQ"), description="Video Tutorials", where = [PluginDescriptor.WHERE_PLUGINMENU, PluginDescriptor.WHERE_EXTENSIONSMENU], icon="plugin_icon.png", fnc=main)
