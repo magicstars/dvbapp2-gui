@@ -1,4 +1,4 @@
-# This converter base on Spaze Team weather converter. It has been changed to suite to magic
+# This converter base on Spaze Team weather converter. It has been changed to suite to magicstar
 
 from Renderer import Renderer
 from enigma import ePixmap, eEnv
