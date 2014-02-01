@@ -468,7 +468,7 @@ lib/python/Components/Converter/Makefile
 lib/python/Components/Renderer/Makefile
 lib/python/Components/Sources/Makefile
 lib/python/Screens/Makefile
-lib/python/magic/Makefile
+lib/python/magicstar/Makefile
 lib/python/Plugins/Makefile
 lib/python/Plugins/Extensions/Makefile
 lib/python/Plugins/Extensions/CutListEditor/Makefile
@@ -493,7 +493,7 @@ lib/python/Plugins/Extensions/TuxboxPlugins/meta/Makefile
 lib/python/Plugins/Extensions/IniMyTube/Makefile
 lib/python/Plugins/Extensions/magicBoot/Makefile
 lib/python/Plugins/Extensions/magicBoot/bin/Makefile
-lib/python/Plugins/Extensions/magicPermanentClock/Makefile
+lib/python/Plugins/Extensions/magicstarPermanentClock/Makefile
 lib/python/Plugins/Extensions/IniHbbTV/Makefile
 lib/python/Plugins/Extensions/AccuWeather/Makefile
 lib/python/Plugins/Extensions/AccuWeather/acuwheathericons/Makefile
@@ -504,7 +504,7 @@ lib/python/Plugins/Extensions/AccuWeather/locale/es/LC_MESSAGES/Makefile
 lib/python/Plugins/Extensions/AccuWeather/wheathericons/Makefile
 lib/python/Plugins/Extensions/AccuWeather/xbmcweather/Makefile
 lib/python/Plugins/Extensions/AccuWeather/xbmcweather/small/Makefile
-lib/python/Plugins/Extensions/magicFaq/Makefile
+lib/python/Plugins/Extensions/magicstarFaq/Makefile
 lib/python/Plugins/SystemPlugins/Makefile
 lib/python/Plugins/SystemPlugins/CableScan/Makefile
 lib/python/Plugins/SystemPlugins/CommonInterfaceAssignment/Makefile
