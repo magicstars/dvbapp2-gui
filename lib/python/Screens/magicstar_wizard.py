@@ -26,7 +26,7 @@ config.egwizard.firmwaremicom = ConfigYesNo(default=False)
 config.egwizard.enableDvbtDrivers = ConfigYesNo(default=False)
 
 
-class magicWizardSetup(ConfigListScreen, Screen):
+class magicstarWizardSetup(ConfigListScreen, Screen):
     __module__ = __name__
     def __init__(self, session, args = 0):
 	Screen.__init__(self, session)
@@ -91,9 +91,9 @@ class magicWizardSetup(ConfigListScreen, Screen):
 
 	config.egwizard.save()
 	#os.system(cmd)
-	self.session.open(Console, title = _("Please wait configuring magic Image"), cmdlist = [cmd], finishedCallback = None, closeOnSuccess = True)
+	self.session.open(Console, title = _("Please wait configuring magicstar Image"), cmdlist = [cmd], finishedCallback = None, closeOnSuccess = True)
 	plugins.readPluginList(resolveFilename(SCOPE_PLUGINS))
-	#self.session.open(InstallWizardIpkgUpdater, _('Please wait configuring magic Image'), IpkgComponent.CMD_INSTALL, {'package': cmd})
+	#self.session.open(InstallWizardIpkgUpdater, _('Please wait configuring magicstar Image'), IpkgComponent.CMD_INSTALL, {'package': cmd})
         self.close()
 
     def dontSaveAndExit(self):
