@@ -165,9 +165,9 @@ self.selectKey("RIGHT")
 			</code>
 		</step>
 <!--		<step id="egwizard" >
-			<text value="magic allows You to choose which main features You would like to enable. Defaulty they are disabled to improve bootup speed and stability. Please enable or disable features You want to have in magic Image" />
+			<text value="magicstar allows You to choose which main features You would like to enable. Defaulty they are disabled to improve bootup speed and stability. Please enable or disable features You want to have in magicstar Image" />
 			<list>
-				<listentry caption="Configure magic Image" step="egwizard2" />
+				<listentry caption="Configure magicstar Image" step="egwizard2" />
 				<listentry caption="Skip it" step="expert" />
 			</list>
 			<code>
@@ -180,8 +180,8 @@ self.selectKey("DOWN")
 			<condition>
 self.condition = config.misc.installwizard.hasnetwork.value and config.misc.installwizard.ipkgloaded.value
 			</condition>  
-			<text value="magic allows You to choose which main features You would like to enable. Defaulty they are disabled to improve bootup speed and stability. Please enable or disable features You want to have in magic Image" />
-			<config screen="magicWizardSetup" module="magic_wizard" args="0" type="ConfigList" />
+			<text value="magicstar allows You to choose which main features You would like to enable. Defaulty they are disabled to improve bootup speed and stability. Please enable or disable features You want to have in magicstar Image" />
+			<config screen="magicstarWizardSetup" module="magicstar_wizard" args="0" type="ConfigList" />
 			<code>
 self.clearSelectedKeys()
 self.selectKey("LEFT")
