@@ -12,7 +12,7 @@ if [ -x @bindir@/showiframe ]; then
 	fi
 fi
 
-# Some magic Scripts
+# Some magicstar Scripts
 
 [ -e /bin/emud ] && /bin/emud &
 
