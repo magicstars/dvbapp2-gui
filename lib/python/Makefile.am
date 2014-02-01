@@ -1,2 +1,2 @@
-SUBDIRS = Components Tools Screens Plugins magic
+SUBDIRS = Components Tools Screens Plugins magicstar
 
