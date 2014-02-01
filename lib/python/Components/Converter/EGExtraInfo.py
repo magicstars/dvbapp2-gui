@@ -1,6 +1,6 @@
 # Based on PliExtraInfo
 # Recoded for Black Pole by meo.
-# Recodded for magic
+# Recodded for magicstar
 
 from enigma import iServiceInformation
 from Components.Converter.Converter import Converter
