@@ -53,9 +53,9 @@ class About(Screen):
 
 		ImageVersion = _("Last Upgrade: ") + about.getLastUpdateString()
 		
-		magicVersion = "magic " + about.getImageVersionString()
+		magicstarVersion = "magicstar " + about.getImageVersionString()
 		
-		self["magicVersion"] = Label(magicVersion)
+		self["magicstarVersion"] = Label(magicstarVersion)
 		AboutText += ImageVersion + "\n"
 
 		fp_version = getFPVersion()
@@ -155,9 +155,9 @@ class Devices(Screen):
 		Screen.setTitle(self, _("Device Information"))
 		self.skinName = ["SystemDevicesInfo", "About"]
 
-		magicVersion = "magic " + about.getImageVersionString()
+		magicstarVersion = "magicstar " + about.getImageVersionString()
 		
-		self["magicVersion"] = Label(magicVersion)
+		self["magicstarVersion"] = Label(magicstarVersion)
 		
 		self.AboutText = ""
 		self["AboutScrollLabel"] = ScrollLabel(self.AboutText)
@@ -282,9 +282,9 @@ class SystemMemoryInfo(Screen):
 		Screen.setTitle(self, _("Memory Information"))
 		#self.skinName = ["SystemMemoryInfo", "About"]
 		self.skinName = ["About"]
-		magicVersion = "magic " + about.getImageVersionString()
+		magicstarVersion = "magicstar " + about.getImageVersionString()
 		
-		self["magicVersion"] = Label(magicVersion)
+		self["magicstarVersion"] = Label(magicstarVersion)
 		
 		self["AboutScrollLabel"] = ScrollLabel()
 
@@ -347,9 +347,9 @@ class SystemNetworkInfo(Screen):
 		Screen.__init__(self, session)
 		Screen.setTitle(self, _("Network Information"))
 		self.skinName = ["SystemNetworkInfo", "About"]
-		magicVersion = "magic " + about.getImageVersionString()
+		magicstarVersion = "magicstar " + about.getImageVersionString()
 		
-		self["magicVersion"] = Label(magicVersion)
+		self["magicstarVersion"] = Label(magicstarVersion)
 		
 		self["LabelBSSID"] = StaticText()
 		self["LabelESSID"] = StaticText()
