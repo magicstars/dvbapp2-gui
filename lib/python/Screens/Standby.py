@@ -52,7 +52,7 @@ class Standby2(Screen):
 
 		print "enter standby"
 		# Venton series	new vfd
-		if open("/proc/stb/info/boxtype").read().strip() == "ini-7012":
+		if open("/proc/stb/info/vumodel").read().strip() == "uno":
 			if path.exists("/proc/stb/lcd/symbol_scrambled"):
 				open("/proc/stb/lcd/symbol_scrambled", "w").write("0")
 		
