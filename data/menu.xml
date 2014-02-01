@@ -2,7 +2,7 @@
 	<id val="mainmenu" />
 		<item weight="2" level="1" text="Plugins" entryID="plugin_selection">
 <code>
-from magic.magic_Green import EGGreenPanel
+from magicstar.magicstar_Green import EGGreenPanel
 self.session.open(EGGreenPanel)
 </code>  
 		</item>
@@ -156,9 +156,9 @@ self.session.openWithCallback(msgClosed, FactoryReset)
 </code>
 			</item>
 			<item weight="15" level="0" text="Software update" entryID="software_update"><screen module="SoftwareUpdate" screen="UpdatePlugin" /></item>
-			<item weight="16" text="magic Personal Backup Panel" entryID="backup_panel">
+			<item weight="16" text="magicstar Personal Backup Panel" entryID="backup_panel">
 <code>
-from magic.magic_backup_panel import magicBackupPanel
+from magicstar.magicstar_backup_panel import magicstarBackupPanel
 from Screens.MessageBox import MessageBox
 
 def checkMountedDevices():
@@ -196,14 +196,14 @@ def checkMountedDevices():
 		return True
 			
 if checkMountedDevices():
-	self.session.open(magicBackupPanel)
+	self.session.open(magicstarBackupPanel)
 else:
-	self.session.open(MessageBox, _('Please connect HDD or USB to backup/restore Your magic Image!'), MessageBox.TYPE_INFO)
+	self.session.open(MessageBox, _('Please connect HDD or USB to backup/restore Your magicstar Image!'), MessageBox.TYPE_INFO)
 </code>
 </item>
-			<item weight="17" text="magic Full Backup Panel" entryID="full_backup_panel">
+			<item weight="17" text="magicstar Full Backup Panel" entryID="full_backup_panel">
 <code>
-from magic.magic_backup_panel import EGFullBackup
+from magicstar.magicstar_backup_panel import EGFullBackup
 from Screens.MessageBox import MessageBox
 
 def checkMountedDevices():
@@ -243,7 +243,7 @@ def checkMountedDevices():
 if checkMountedDevices():
 	self.session.open(EGFullBackup)
 else:
-	self.session.open(MessageBox, _('Please connect HDD or USB to full backup of Your magic Image!'), MessageBox.TYPE_INFO)
+	self.session.open(MessageBox, _('Please connect HDD or USB to full backup of Your magicstar Image!'), MessageBox.TYPE_INFO)
 </code>
 </item>
 		</menu>
