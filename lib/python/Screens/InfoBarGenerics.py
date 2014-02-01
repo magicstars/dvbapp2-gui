@@ -3228,7 +3228,7 @@ class InfoBarSubtitleSupport(object):
 		if self.selected_subtitle:
 			self.enableSubtitle(self.selected_subtitle)
 
-from magic.magic_infobar_setup import *
+from magicstar.magicstar_infobar_setup import *
 
 class InfoBarServiceErrorPopupSupport:
 	def __init__(self):
